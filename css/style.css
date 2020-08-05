@@ -1,10 +1,10 @@
 /* Font import */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
 /* Reset */
 *,
 *::before,
-::after {
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: inherit;
@@ -15,13 +15,13 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     box-sizing: border-box;
 }
 
 .wrapper {
-    display: flex;
     height: 100vh;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -34,16 +34,16 @@ body {
     width: 50rem;
     padding: 3rem 5rem;
     border-radius: 0.3rem;
+    background: linear-gradient(to right, #373b44, #4286f4);
     box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3);
-    background: linear-gradient(to right, #373B44, #4286f4);
     transform: skewX(-10deg) translateX(-10rem);
-    transition: transform .3s;
+    transition: transform 0.3s;
 }
 
 .shape:not(:last-child) {
-    background: linear-gradient(to right, #4286f4, #373B44);
-    margin-bottom: 5rem;
+    background: linear-gradient(to right, #4286f4, #373b44);
     transform: translateX(10rem) skewX(-10deg);
+    margin-bottom: 5rem;
 }
 
 /* Card picture styles */
@@ -51,12 +51,11 @@ body {
     width: 15rem;
     height: 15rem;
     float: left;
-    transform: skew(10deg);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-
     -webkit-shape-outside: circle(50% at 44% 44%);
     shape-outside: circle(50% at 44% 44%);
+    transform: skew(10deg);
 
     position: relative;
 }
@@ -79,8 +78,8 @@ body {
     font-size: 1.4rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1rem;
     text-align: center;
+    letter-spacing: 0.1rem;
     color: #fff;
     opacity: 0;
 
@@ -89,21 +88,21 @@ body {
 }
 
 .shape__text {
-    transform: translate(2.5rem, .5rem) skewX(10deg);
-    line-height: 1.4;
     font-size: 1.3rem;
     color: #fff;
+    line-height: 1.4;
+    transform: translate(2.5rem, 0.5rem) skewX(10deg);
 }
 
 /* Hover styles */
 .shape:hover {
     cursor: pointer;
-    transform: translate(-10rem, -.3rem) skewX(-10deg);
+    transform: translate(-10rem, -0.3rem) skewX(-10deg);
     box-shadow: 0 4rem 5rem rgba(0, 0, 0, 0.3);
 }
 
 .shape:not(:last-child):hover {
-    transform: translate(10rem, -.3rem) skewX(-10deg);
+    transform: translate(10rem, -0.3rem) skewX(-10deg);
 }
 
 .shape:hover .shape__caption {
@@ -123,7 +122,7 @@ body {
     left: 0;
     height: 100%;
 
-    opacity: .5;
+    opacity: 0.5;
 }
 
 .bg-video__content {
